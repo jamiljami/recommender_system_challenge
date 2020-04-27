@@ -1,19 +1,26 @@
-# recommender_system_challenge
+# recommender_system
+Recommender System for UCI Restaurant Data based on Siraj RS Tutorial
 
-An implementation of the Recommender System Challenge by @Sirajology on [Youtube](https://youtu.be/9gBC9R-msAk).
+UCI restaurant data http://archive.ics.uci.edu/ml/datasets/Entree+Chicago+Recommendation+Data
 
-# Overview
+For the UCI data, we will use all the past restaurant searches as what that user liked. Anything more complex would be harder to interpret for the span of this project.
 
-This code uses [lightfm](https://github.com/lyst/lightfm) recommender system library to train a hybrid content-based + collaborative algorithm that uses the WARP loss function on a [restaurant](https://archive.ics.uci.edu/ml/datasets/Entree+Chicago+Recommendation+Data) dataset. The entree dataset contains restaurant ratings from 50,000 instances. Once trained, our script prints out recommended entrees for whatever users from the dataset that we choose to terminal.
+1) Learning Summary
+# Admin: Learn git README formatting
+# ML: Recommender model and background mathematics
+# Python:
+# Software principles: Structure of program, functions and separation/containerisation 
 
-# Dependencies
+2) Write-Up Summary:
+2.1) Current algorithm
+- Parses UCI data and methodology (with data assumptions)
+- Lightfm model with WARP loss
+- Functioning but performance not quantified
+2.2) Required Improvements
+- Good articles if search for recommender system accuracy and WARP loss
+- Accurancy: metrics for accuracy and beyond accuracy of a recommender system
+- Pipeline: needs split between model training and use (so we don't need to continuously train model)
+- Visualisation: how else can we visualise data?
 
-* numpy (http://www.numpy.org/)
-* scipy (https://www.scipy.org/)
-* lightfm (https://github.com/lyst/lightfm)
 
-Install missing dependencies using [pip](https://pip.pypa.io/en/stable/installing/)
 
-# Credits
-
-Credit goes to the [lightfm](https://github.com/lyst/lightfm) team and Siraj Raval. I've merely created a wrapper to make it more readable.
